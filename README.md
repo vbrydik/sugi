@@ -1,17 +1,14 @@
-# sugi (WIP!)
+# sugi
 
-A simple 2D engine
+a simple 2d engine
 
-## Build from source
+## build & run
 
-Build:
-
-```
-mkdir -p build && cd build && cmake .. && make
-```
-
-Run:
+you can use provided `Makefile` 
+to build and run this project:
 
 ```
-cd build && ./sugi
+make build
+make run
 ```
+
