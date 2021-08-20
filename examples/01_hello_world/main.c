@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "sugi/core.h"
-#include "hash.h"
-#include "array.h"
-#include "ecs.h"
+#include "hash/hash.h"
+#include "array/array.h"
+#include "ecs/ecs.h"
 
 
 

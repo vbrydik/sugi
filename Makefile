@@ -1,23 +1,29 @@
-# Define build directory and executable file name
 BUILD_DIR="build"
-EXEC_NAME="sugi"
-
-# Create variable for executable file
-EXEC_FILE="$(BUILD_DIR)/$(EXEC_NAME)"
+EXAMPLES_DIR="examples"
 
 build:
-	@echo "Building $(EXEC_FILE)..."
-	@mkdir -p build && cd build && cmake .. && make
+	@echo "Building..."
+	@mkdir -p $(BUILD_DIR) && cd $(BUILD_DIR) && cmake .. && make
 
-run:
-	@if [ ! -f "$(EXEC_FILE)" ]; then \
-	    echo "$(EXEC_FILE) does not exist." ; \
+example:
+	@if [ ! -f "$(BUILD_DIR)/$(EXAMPLES_DIR)/$(TARGET)" ]; then \
+	    echo "$(BUILD_DIR)/$(EXAMPLES_DIR)/$(TARGET) DOES NOT exist!" ; \
 	else \
-	    echo "Running $(EXEC_FILE)..." ; \
-	    $(EXEC_FILE) ; \
+	    echo "Running $(BUILD_DIR)/$(EXAMPLES_DIR)/$(TARGET)" ; \
+	    $(BUILD_DIR)/$(EXAMPLES_DIR)/$(TARGET) ; \
 	fi
+
+# run:
+# 	@if [ ! -f "$(EXEC_FILE)" ]; then \
+# 	    echo "$(EXEC_FILE) does not exist." ; \
+# 	else \
+# 	    echo "Running $(EXEC_FILE)..." ; \
+# 	    $(EXEC_FILE) ; \
+# 	fi
 
 clear:
 	@echo "Clear and remove $(BUILD_DIR)..."
 	@rm -r $(BUILD_DIR)
 
+docs:
+	@doxygen Doxyfile

@@ -2,7 +2,7 @@
 #define HASH_H
 
 #include <stdint.h>
-#include "array.h"
+#include "array/array.h"
 
 struct hash_table_t;
 typedef struct hash_table_t {

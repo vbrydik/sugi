@@ -9,6 +9,7 @@
 #include "sugi/render.h"
 #include "sugi/shader.h"
 #include "sugi/texture.h"
+#include "array/array.h"
 
 
 SugiCoreState m_core_state;

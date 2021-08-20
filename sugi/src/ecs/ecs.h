@@ -6,8 +6,8 @@
 #define ECS_MAX_COMP_PER_ENT 	32
 
 #include <stdarg.h>
-#include "hash.h"
-#include "array.h"
+#include "hash/hash.h"
+#include "array/array.h"
 
 typedef uint64_t entity_id_t;
 
